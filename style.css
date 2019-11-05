@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "litfont";
+  font-style: normal;
+  font-weight: 400;
+  src: local("litfont"), local("litfont"), url(./assets/litfont.woff2) format("woff2"), url(./assets/litfont.woff) format("woff");
+}
+
+@media (max-height: 600px) {
+  * {
+    font-size: 1em;
+  }
+}
+
+* {
+  margin: 0;
+  font-family: "litfont";
+  color: #68707f
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    background-color: #a41a42;
+    padding: 10px 0;
+    color: white;
+    font-size: 3em;
+    margin-bottom: 10px; 
+}
+
+#start {
+    width: 360px;
+    margin: 10px;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 2.5em;
+    color: white;
+    background-color: #a41a42;
+}
+
+#start:hover {
+    color: #a41a42;
+    background-color: white;
+}
+
+input {
+    width: 340px;
+    margin: 10px;
+    padding: 15px;
+    font-size: 2em;
+    border: transparent;
+    color: #a41a42;
+}
+
+::placeholder {
+     color: #9aa2b1;
+}
+
+input:focus{
+    outline: none;
+}
+
+.shadow {
+    box-shadow: 0px 0px 10px #9aa2b1aa;
+    border-radius: 30px;
+}
+
+#scoreboard {
+    display: none;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    vertical-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+h2 {
+    color: #9aa2b1;
+    font-size: 2em;
+    margin-right: 15px;
+    line-height: 2em;
+}
+
+.score {
+    margin: 10px;
+    padding: 15px 40px;
+    display: flex;
+}
+
+#setup {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-figures {
+    margin: 10px;
+    padding: 15px;
+    display: grid;
+	grid-gap: 10px;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto auto;
+}
+
+.player-figures img {
+    width: 100px;
+}
+
+.selected {
+    -moz-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+    -webkit-animation: spin 1.5s linear infinite;
+}
+
+.player-figures img:hover {
+    transform: scale(1.1);
+}
+
+.fig-selected {
+    opacity: 0.5;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
